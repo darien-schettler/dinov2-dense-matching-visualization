@@ -6,7 +6,7 @@ const ImageRGBAnalyzer = () => {
   const [activeCanvas, setActiveCanvas] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [images, setImages] = useState([null, null, null, null]);
-  const [range, setRange] = useState(3);
+  const [range, setRange] = useState(30);
   const [opacity, setOpacity] = useState(0.5);
   const canvasRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const originalImageData = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -14,7 +14,7 @@ const ImageRGBAnalyzer = () => {
   const resizeImage = (img) => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    const MAX_SIZE = 300;
+    const MAX_SIZE = 500;
     let width = img.width;
     let height = img.height;
 
@@ -220,7 +220,7 @@ const ImageRGBAnalyzer = () => {
       </div>
       {images.some(img => !img) && (
         <p className="mt-4">
-          Please upload all four images to begin analysis. Images will be resized to fit within 300x300 squares.
+          Please upload all four images to begin analysis. Images will be resized to fit within 500x500 squares.
         </p>
       )}
       {images.every(img => img) && (

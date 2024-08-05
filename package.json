@@ -1,6 +1,6 @@
 {
-  "name": "claude-artifacts-react",
-  "private": true,
+  "name": "dinov2-dense-matching-visualization",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

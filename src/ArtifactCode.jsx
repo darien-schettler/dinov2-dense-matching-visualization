@@ -14,7 +14,7 @@ const ImageRGBAnalyzer = () => {
   const resizeImage = (img) => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    const MAX_SIZE = 500;
+    const MAX_SIZE = 420;
     let width = img.width;
     let height = img.height;
 
@@ -203,13 +203,13 @@ const ImageRGBAnalyzer = () => {
               ref={canvasRefs[index]}
               onMouseMove={handleMouseMove(index)}
               onMouseLeave={handleMouseLeave}
-              className="border border-gray-500"
-              width="500"
-              height="500"
+              className="border border-gray-420"
+              width="420"
+              height="420"
             />
             {images[index] && activeCanvas === index && (
               <div
-                className="absolute bg-white border border-gray-500 p-2 rounded shadow-md"
+                className="absolute bg-white border border-gray-420 p-2 rounded shadow-md"
                 style={{ left: position.x + 10, top: position.y + 10 }}
               >
                 RGB: ({rgb.r}, {rgb.g}, {rgb.b})
@@ -220,7 +220,7 @@ const ImageRGBAnalyzer = () => {
       </div>
       {images.some(img => !img) && (
         <p className="mt-4">
-          Please upload all four images to begin analysis. Images will be resized to fit within 500x500 squares.
+          Please upload all four images to begin analysis. Images will be resized to fit within 420x420 squares.
         </p>
       )}
       {images.every(img => img) && (

@@ -203,13 +203,13 @@ const ImageRGBAnalyzer = () => {
               ref={canvasRefs[index]}
               onMouseMove={handleMouseMove(index)}
               onMouseLeave={handleMouseLeave}
-              className="border border-gray-300"
-              width="300"
-              height="300"
+              className="border border-gray-500"
+              width="500"
+              height="500"
             />
             {images[index] && activeCanvas === index && (
               <div
-                className="absolute bg-white border border-gray-300 p-2 rounded shadow-md"
+                className="absolute bg-white border border-gray-500 p-2 rounded shadow-md"
                 style={{ left: position.x + 10, top: position.y + 10 }}
               >
                 RGB: ({rgb.r}, {rgb.g}, {rgb.b})
